@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NewTravellingSite</title>
+		<link rel="stylesheet" href="new.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body style = "background-image: url('https://c4.wallpaperflare.com/wallpaper/765/992/4/road-in-black-and-white-wallpaper-thumb.jpg'); background-repeat: no-repeat; background-size: cover;">
+		<div class = "container">
+			<div class="row">
+					<h1 style = "text-align: center;padding:50px ;background-color: rgba(252, 253, 253, 0.5)">Create a new travelling site of your choice here!</h1>
+				<div style="width: 30%; margin: 25px auto">
+					<form action= "/travelsites" method ="POST">
+								<div class="column">
+									<div class = "form-group">
+											<input class="form-control" type = "text" name = "name" placeholder = "name">
+									</div>
+								</div>
+									<div class = "form-group">
+										<input class="form-control" type = "text" name = "image" placeholder = "image url">
+									</div>
+									<div class = "form-group">
+										<input class="form-control" type = "text" name = "details" placeholder = "info">
+									</div>
+				
+									<div class = "form-group">
+											<button class = "btn btn-lg btn-dark btn-block">Submit</button>
+										</div>
+									
+					</form>
+					<a href = "/travelsites" class="btn btn-sm btn-dark">Go Back</a>
+				</div>
+			</div>
+		</div>
+
+
+<%- include ("partials/footer") %>

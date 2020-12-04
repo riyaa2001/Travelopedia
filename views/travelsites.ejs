@@ -1,0 +1,54 @@
+<%- include ("partials/header") %>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	<a class="navbar-brand" style= "color: white; " href="/">TraveloPedia</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" style= "color: white;" href="/">Home <span class="sr-only">(current)</span></a>
+		</li>
+		
+		
+	  </ul>
+	  <form class="form-inline my-2 my-lg-0">
+		<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		<a class="btn btn-light btn-lg bg-gradient-light " href = "/travelsites/new" >Add</a>
+	  </form>
+	</div>
+  </nav>
+
+<div class="container">
+
+	
+    <header class = "jumbotron" style = "background-color: rgba(252, 197, 197, 0.4);">
+		<div class="container">
+	         <h1 style = "font-family: Syne Mono; color: aliceblue;" >Welcome to TraveloPedia!</h1>
+		    <p>View our handpicked travelling sites from all over India</p>
+		    <p><a class = "btn btn-primary btn-lg btn" href="/travelsites/new">Add New Travelling Site</a></p>
+        </div>
+	</header>
+	<p style = "background-color: rgba(255, 255, 255, 0.4); padding: 10px;height: 50px;text-align: left;font-family: serif; font-weight: 800;font-size: large;"> Your destinations are just a click away!!</p>
+	<div class = "container">
+		<div class="row text-center" style=" display:flex; flex-wrap: wrap;">
+			<% travelsites.forEach(function(travelsites){ %>
+				<div class = "col-sm-6 col-md-4">
+					<div class = "thumbnail" style = "background-color: rgba;">
+					   <a class="btn" href = "<%= travelsites.details %>"><img src = "<%= travelsites.image %>" style = "width: 340px; height: 250px; "alt = "Generic placeholder thumbnail"></a>
+					</div>
+					
+					<div class = "caption" style = "background-color: rgba(165, 238, 234, 0.5);">
+					   <h4 style="text-align: center;"> <%= travelsites.name %></h4>
+					   <p></p>
+					</div>
+				 </div>
+			<% }); %>
+	   </div>                         
+	</div>
+</div>
+
+<%- include ("partials/footer") %>

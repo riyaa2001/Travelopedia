@@ -1,0 +1,29 @@
+body{
+    
+    background-image: url("https://ak.picdn.net/shutterstock/videos/18051193/thumb/1.jpg");
+    background-size: cover;
+    
+}
+.jumbotron{
+    background : rgba(107, 235, 228, 0);
+}
+h1{
+    text-align: center;
+    font-family: 'Syne Mono', monospace;
+    font-size: 200%;
+    font-weight: bold;
+    color: rgb(3, 74, 107) ;
+}
+p{
+    text-align: center;
+    font-size: large;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+
+}
